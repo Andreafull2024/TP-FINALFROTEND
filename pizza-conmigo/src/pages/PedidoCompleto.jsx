@@ -61,7 +61,7 @@ function PedidoCompleto() {
     };
 
     try {
-      const resPedido = await fetch('http://localhost:3000/pedidos', {
+      const resPedido = await fetch('https://tp-finalbackend-production.up.railway.app/pedidos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(pedidoBase)
@@ -80,7 +80,7 @@ function PedidoCompleto() {
             : { pizzaId: pizza.id })
         };
 
-        const resDetalle = await fetch('http://localhost:3000/detalle-pedido', {
+        const resDetalle = await fetch('tp-finalbackend-production.up.railway.app/detalle-pedido', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(detalle)

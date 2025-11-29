@@ -17,7 +17,7 @@ function IniciarSesion() {
     if (isLogin) {
       // LOGIN
       try {
-        const res = await fetch("http://localhost:3000/clientes/login", {
+        const res = await fetch("https://tp-finalbackend-production.up.railway.app/clientes/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -57,7 +57,7 @@ function IniciarSesion() {
     } else {
       // REGISTRO
       try {
-        const res = await fetch("http://localhost:3000/clientes", {
+        const res = await fetch("https://tp-finalbackend-production.up.railway.app/clientes", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

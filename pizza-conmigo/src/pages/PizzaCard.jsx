@@ -14,7 +14,7 @@ function PizzaCard() {
 
   // 🔗 Traer pizzas del backend
   useEffect(() => {
-    axios.get("http://localhost:3000/pizzas") // endpoint 
+    axios.get("https://tp-finalbackend-production.up.railway.app/pizzas") // endpoint 
       .then((res) => {
         setPizzas(res.data);
       })

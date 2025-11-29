@@ -46,7 +46,7 @@ function PersonalizarPizza() {
     };
 
     try {
-      const res = await fetch('http://localhost:3000/personalizar-pizzas', {
+      const res = await fetch('https://tp-finalbackend-production.up.railway.app/personalizar-pizzas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(pizzaPersonalizada)
