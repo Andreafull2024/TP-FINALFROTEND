@@ -47,10 +47,11 @@ function PersonalizarPizza() {
 
     try {
       const res = await fetch('https://tp-finalbackend-production.up.railway.app/personalizar-pizzas', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(pizzaPersonalizada)
-      });
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(pizzaPersonalizada),
+  credentials: 'include'   // 👈 esto habilita cookies/sesiones y hace match con CORS
+});
 
       if (!res.ok) {
         throw new Error('Error al guardar la pizza');
