@@ -13,15 +13,20 @@ function PizzaCard() {
   const navigate = useNavigate();
 
   // 🔗 Traer pizzas del backend
-  useEffect(() => {
-    axios.get("https://tp-finalbackend-production.up.railway.app/pizzas") // endpoint 
-      .then((res) => {
-        setPizzas(res.data);
-      })
-      .catch((err) => {
-        console.error("Error al cargar pizzas:", err);
-      });
-  }, []);
+useEffect(() => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
+  axios.get(`${API_URL}/pizzas`, {
+    withCredentials: true, // 👈 importante si el backend usa cookies o sesiones
+  })
+    .then((res) => {
+      setPizzas(res.data);
+    })
+    .catch((err) => {
+      console.error("Error al cargar pizzas:", err);
+    });
+}, []);
+
 
   const handleAgregar = (pizza, cantidad) => {
     const cantidadNum = Number(cantidad);

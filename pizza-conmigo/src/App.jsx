@@ -23,7 +23,7 @@ import './assets/style/contacto.css';
 import './assets/style/aboutus.css';
 import './assets/style/PizzaCard.css';
 import './assets/style/registro.css';
-import './assets/style/header.css';
+import './assets/style/Header.css';
 import './assets/style/footer.css';
 import './App.css';
 
