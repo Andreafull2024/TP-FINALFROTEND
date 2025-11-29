@@ -15,10 +15,7 @@ function PizzaCard() {
   // 🔗 Traer pizzas del backend
 useEffect(() => {
   const API_URL = import.meta.env.VITE_API_URL;
-
-  axios.get(`${API_URL}/pizzas`, {
-    withCredentials: true, // 👈 importante si el backend usa cookies o sesiones
-  })
+  axios.get(`${API_URL}/pizzas`)
     .then((res) => {
       setPizzas(res.data);
     })
@@ -26,7 +23,6 @@ useEffect(() => {
       console.error("Error al cargar pizzas:", err);
     });
 }, []);
-
 
   const handleAgregar = (pizza, cantidad) => {
     const cantidadNum = Number(cantidad);
