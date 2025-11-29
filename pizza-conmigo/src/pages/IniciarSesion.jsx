@@ -11,19 +11,17 @@ function IniciarSesion() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const API_URL = import.meta.env.VITE_API_URL; // 👈 usamos la variable de entorno
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (isLogin) {
       // LOGIN
       try {
-        const res = await fetch(`${API_URL}/clientes/login`, {
+        const res = await fetch("https://tp-finalbackend-production.up.railway.app/clientes/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            nombre_usuario: email, // 👈 usamos email como nombre_usuario
+            nombre_usuario: email,   // 👈 usamos email como nombre_usuario
             contraseña: password,
           }),
         });
@@ -31,6 +29,7 @@ function IniciarSesion() {
         const data = await res.json();
 
         if (res.ok) {
+          // 👇 guardamos siempre con la clave "cliente"
           localStorage.setItem("cliente", JSON.stringify(data.cliente));
 
           Swal.fire({
@@ -58,12 +57,11 @@ function IniciarSesion() {
     } else {
       // REGISTRO
       try {
-        const res = await fetch(`${API_URL}/clientes`, {
+        const res = await fetch("https://tp-finalbackend-production.up.railway.app/clientes", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            nombre_usuario: email, // 👈 unificamos con login
-            nombre,
+            nombre_usuario: email,   // 👈 unificamos con login
             email,
             contraseña: password,
           }),
@@ -72,6 +70,7 @@ function IniciarSesion() {
         const data = await res.json();
 
         if (res.ok) {
+          // 👇 opcional: guardar sesión automáticamente al registrarse
           localStorage.setItem("cliente", JSON.stringify(data.cliente));
 
           Swal.fire({
