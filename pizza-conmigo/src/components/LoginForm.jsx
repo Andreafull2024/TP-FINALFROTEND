@@ -3,22 +3,23 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/style/Registro.css';
 import Swal from 'sweetalert2';
+const API_URL = import.meta.env.VITE_API_URL;
 
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [clave, setClave] = useState('');
   const navigate = useNavigate();
 
-  const iniciarSesion = async () => {
-    try {
-      const response = await fetch('https://tp-finalbackend-production.up.railway.app/clientes/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nombre_usuario: email.trim().toLowerCase(), // usamos el email como nombre_usuario
-          contraseña: clave
-        })
-      });
+ const iniciarSesion = async () => {
+  try {
+    const response = await fetch(`${API_URL}/clientes/login`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    nombre_usuario: email.trim().toLowerCase(),
+    contraseña: clave
+  })
+});
 
       const data = await response.json();
 
