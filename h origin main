@@ -1,0 +1,53 @@
+[33mcommit 78261f03846bd046f44e8c7565d2726104753cd5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Sat Nov 29 19:25:59 2025 -0300
+
+    Corrijo PizzaCard con VITE_API_URL
+
+[33mcommit 0d6ec445bb0d06d39827a110c69b09a0622e20a7[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Sat Nov 29 01:46:32 2025 -0300
+
+    sin cambios
+
+[33mcommit 6eedd1eb5feab7a3cec288b2b668110b097b8c58[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Sat Nov 29 01:37:32 2025 -0300
+
+    add credentials include to fetch personalizar-pizzas
+
+[33mcommit a7eadbb29f8a78c8068837f89b836643c49054c2[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Sat Nov 29 01:28:54 2025 -0300
+
+    axios withCredentials
+
+[33mcommit 3da4733b083f4385f36ca03b013ea21d611fcc10[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Sat Nov 29 01:26:54 2025 -0300
+
+    axios withCredentials
+
+[33mcommit 5e10d89d11ea8f41cd93d3d47f0d6b378351138f[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Fri Nov 28 23:00:28 2025 -0300
+
+    Agrego axios como dependencia
+
+[33mcommit 954179ea1ec473945d4b0e61a972b8fafa69803a[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Fri Nov 28 22:56:43 2025 -0300
+
+    Agrego dependencia emailjs/browser
+
+[33mcommit ae15d9a1c862c922c748e3de83eadab07a14ff13[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Fri Nov 28 22:52:57 2025 -0300
+
+    correccion de nombre
+
+[33mcommit 65d3b73902cd6b582402928ddb9659a2f96a5694[m
+Author: Andreafullstack <andreasanjuan21@gmail.com>
+Date:   Wed Nov 26 18:55:13 2025 -0300
+
+    Primer commit: subo todos los archivos del proyecto
