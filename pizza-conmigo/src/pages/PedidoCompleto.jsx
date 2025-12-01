@@ -61,11 +61,12 @@ function PedidoCompleto() {
     };
 
     try {
-      const resPedido = await fetch('https://tp-finalbackend-production.up.railway.app/pedidos', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(pedidoBase)
-      });
+    const resPedido = await fetch(`${import.meta.env.VITE_API_URL}/pedidos`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(pedidoBase)
+});
+
 
       if (!resPedido.ok) throw new Error('Error al crear el pedido');
       const pedidoCreado = await resPedido.json();
@@ -80,11 +81,12 @@ function PedidoCompleto() {
             : { pizzaId: pizza.id })
         };
 
-        const resDetalle = await fetch('tp-finalbackend-production.up.railway.app/detalle-pedido', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(detalle)
-        });
+        const resDetalle = await fetch(`${import.meta.env.VITE_API_URL}/detalle-pedido`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(detalle)
+});
+
 
         if (!resDetalle.ok) throw new Error('Error al guardar detalle');
       }
