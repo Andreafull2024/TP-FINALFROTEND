@@ -22,10 +22,10 @@ import './assets/style/home.css';
 import './assets/style/contacto.css';
 import './assets/style/aboutus.css';
 import './assets/style/PizzaCard.css';
-import './assets/style/registro.css';
+
 import './assets/style/Header.css';
 import './assets/style/footer.css';
-import './assets/style/Registro.css';
+
 import './App.css';
 
 function App() {
