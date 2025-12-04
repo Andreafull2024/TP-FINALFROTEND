@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../assets/style/registro.css';
+import '../assets/style/Registro.css';
 
 function CrudUsuarios() {
   const [usuarios, setUsuarios] = useState([]);
