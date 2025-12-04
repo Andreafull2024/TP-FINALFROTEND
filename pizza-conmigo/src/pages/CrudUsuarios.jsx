@@ -5,10 +5,11 @@ function CrudUsuarios() {
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
+  if (typeof window !== 'undefined') {
     const datos = JSON.parse(localStorage.getItem('usuarios')) || [];
     setUsuarios(datos);
-  }, []);
-
+  }
+}, []);
   const eliminarUsuario = (index) => {
     const nuevos = [...usuarios];
     nuevos.splice(index, 1);

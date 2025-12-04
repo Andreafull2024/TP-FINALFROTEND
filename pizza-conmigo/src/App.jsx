@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import { PedidoProvider } from './context/PedidoContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ProtectedRoute from './components/ProtectedRoute'; // 👈 nuevo import
+import ProtectedRoute from './components/ProtectedRoute'; // 👈 sigue importado por si lo usás en otras rutas
 
 // 📄 Páginas
 import Home from './pages/Home';
@@ -52,14 +52,9 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="/usuarios"
-              element={
-                <ProtectedRoute>
-                  <CrudUsuarios />
-                </ProtectedRoute>
-              }
-            />
+
+            {/* Ruta de usuarios SIN ProtectedRoute */}
+            <Route path="/usuarios" element={<CrudUsuarios />} />
           </Routes>
         </Layout>
       </Router>
