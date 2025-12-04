@@ -15,7 +15,7 @@ import PersonalizarPizza from './pages/PersonalizarPizza';
 import PizzaCard from './pages/PizzaCard';
 import PedidoCompleto from './pages/PedidoCompleto';
 import IniciarSesion from "./pages/IniciarSesion";
-import CrudUsuarios from "./pages/CrudUsuarios";
+import CrudUsuarios from "./pages/CrudUsuarios.jsx";
 
 // 🎨 Estilos
 import './assets/style/home.css';
