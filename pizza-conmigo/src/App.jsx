@@ -14,7 +14,6 @@ import Contact from './pages/Contact';
 import PersonalizarPizza from './pages/PersonalizarPizza';
 import PizzaCard from './pages/PizzaCard';
 import PedidoCompleto from './pages/PedidoCompleto';
-import CrudUsuarios from './pages/CrudUsuarios'; 
 import IniciarSesion from "./pages/IniciarSesion";
 
 // 🎨 Estilos
