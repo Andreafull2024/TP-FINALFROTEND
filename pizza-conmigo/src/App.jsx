@@ -15,6 +15,7 @@ import PersonalizarPizza from './pages/PersonalizarPizza';
 import PizzaCard from './pages/PizzaCard';
 import PedidoCompleto from './pages/PedidoCompleto';
 import IniciarSesion from "./pages/IniciarSesion";
+import Crud from "./pages/CrudUsuarios";
 
 // 🎨 Estilos
 import './assets/style/home.css';
@@ -24,6 +25,7 @@ import './assets/style/PizzaCard.css';
 import './assets/style/Header.css';
 import './assets/style/footer.css';
 import './assets/style/PersonalizarPizza.css';
+import './assets/style/registro.css';
 
 import './App.css';
 
