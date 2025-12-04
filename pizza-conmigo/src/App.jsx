@@ -25,7 +25,7 @@ import './assets/style/PizzaCard.css';
 import './assets/style/Registro.css';
 import './assets/style/Header.css';
 import './assets/style/footer.css';
-import './assets/style/personalizarPizza.css';
+import './assets/style/PersonalizarPizza.css';
 
 import './App.css';
 
